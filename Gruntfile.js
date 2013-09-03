@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         jslint: {
             files: [
-                'src/**/*.js',
+                'src/*.js',
                 'helper/**/*.js',
                 'spec/**/*.js'
             ]
@@ -13,7 +13,11 @@ module.exports = function (grunt) {
         jasmine: {
             src: 'src/**/*.js',
             options: {
-                helpers: 'helper/**/*.js',
+                vendor: [
+                    'vendor/jquery-1.10.2.js',
+                    'vendor/jquery.event.move.js',
+                    'vendor/hogan-2.0.0.js'
+                ],
                 specs: 'spec/**/*.js'
             }
         },
