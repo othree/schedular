@@ -10,15 +10,23 @@ module.exports = function (grunt) {
                 'spec/**/*.js'
             ]
         },
-        jasmine : {
-            src : 'src/**/*.js',
-            options : {
-                helpers : 'helper/**/*.js',
-                specs : 'spec/**/*.js'
+        jasmine: {
+            src: 'src/**/*.js',
+            options: {
+                helpers: 'helper/**/*.js',
+                specs: 'spec/**/*.js'
+            }
+        },
+        hogan: {
+            publish: {
+                files: {
+                    "src/templates/row.js": ["src/templates/row.mustache"]
+                }
             }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-hogan');
     grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
 
