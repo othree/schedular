@@ -21,6 +21,11 @@ module.exports = function (grunt) {
             publish: {
                 files: {
                     "src/templates/row.js": ["src/templates/row.mustache"]
+                },
+                options: {
+                    defaultName: function (filename) {
+                        return filename.split('/').pop().replace(/\.mustache$/, '');
+                    }
                 }
             }
         }
