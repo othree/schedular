@@ -1,4 +1,4 @@
-/*jslint vars: true */
+/*jslint vars: true, plusplus: true, forin: true */
 /*global $: false, Schedular: false, Templates: false */
 
 (function (root) {
