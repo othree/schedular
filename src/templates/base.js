@@ -1,0 +1,3 @@
+this["Templates"] = this["Templates"] || {};
+
+this["Templates"]["base"] = new Hogan.Template(function(c,p,i){var _=this;_.b(i=i||"");_.b("<div class=\"s-wrapper\">");_.b("\n" + i);_.b("    <div class=\"col-root\"></div>");_.b("\n" + i);_.b("    <div class=\"root\"></div>");_.b("\n" + i);_.b("    <div class=\"arr-col\"></div>");_.b("\n" + i);_.b("    <div class=\"arr-row\"></div>");_.b("\n" + i);_.b("</div>");_.b("\n");return _.fl();;});

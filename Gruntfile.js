@@ -24,7 +24,11 @@ module.exports = function (grunt) {
         hogan: {
             publish: {
                 files: {
-                    "src/templates/row.js": ["src/templates/row.mustache"]
+                    "src/templates/base.js": ["src/templates/base.mustache"],
+                    "src/templates/row.js": ["src/templates/row.mustache"],
+                    "src/templates/cell.js": ["src/templates/cell.mustache"],
+                    "src/templates/col.js": ["src/templates/col.mustache"],
+                    "src/templates/colcell.js": ["src/templates/colcell.mustache"]
                 },
                 options: {
                     defaultName: function (filename) {
