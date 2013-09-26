@@ -4,16 +4,16 @@
     font-size: 0px;
 }
 
-.col, .row, .cell, .colcell {
-    box-sizing: border-box;
+.col, .row, .cell, .colcell, .cell-content {
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .root {
     position: relative;
     z-index: 1;
 }
-
 .col-root {
     position: absolute;
     top: 0;
@@ -24,22 +24,38 @@
 .col {
     display: inline-block;
 }
-
 .row {
-}
-
-.cell {
-    display: inline-block;
-    border: 1px dotted black;
-}
-.colcell {
-    border: 1px dashed blue;
 }
 
 .cell, .colcell {
     width: 200px;
     height: 80px;
+    margin: 0 4px 4px 0;
+}
+.cell {
+    display: inline-block;
+    border: 1px dotted black;
+    position: relative;
+}
+.colcell {
+    border: 1px dashed blue;
+}
+
+.cell-content {
+    overflow: hidden;
+    width: 200px;
+    height: 80px;
     font-size: 14px;
     font-size: 1rem;
-    margin: 0 4px 4px 0;
+    padding: 4px;
+}
+
+.cell-mover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background: #69f;
+    cursor: move;
 }
