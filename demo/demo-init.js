@@ -3,7 +3,7 @@
 (function () {
     "use strict";
 
-    var sche = new Schedular($('#schedular-demo'));
+    var sche = new Schedular($('#schdular-demo'));
 
 }());
 
