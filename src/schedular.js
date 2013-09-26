@@ -39,11 +39,14 @@
 
     Schedular.prototype = {
         init: function (options) {
-            this.$el.append(Templates.base());
+            var i;
+            this.$el.append(Templates.base.r());
             this.$root = this.$el.find('.root');
             this.$colRoot = this.$el.find('.col-root');
             this.options = options;
             this.grid = [];
+            this.row = 0;
+            this.col = 0;
             for (i = 0; i < this.options.row; i++) {
                 this.addRow();
             }
@@ -58,17 +61,19 @@
             this.addRowNode();
         },
         addRowNode: function () {
-            var $row = $(Templates.row());
+            var i;
+            var $row = $(Templates.row.r());
             for (i = 0; i < this.col; i++) {
-                $row.append(Templates.cell());
+                $row.append(Templates.cell.r());
             }
             this.$root.append($row);
             this.$colRoot.find('.col').each(function () {
-                $(this).append(Templates.colcell());
+                $(this).append(Templates.colcell.r());
             });
         },
 
         addCol: function () {
+            var i;
             this.col++;
             for (i = 0; i < this.row; i++) {
                 this.grid[i].push(new Obj());
@@ -76,13 +81,14 @@
             this.addColNode();
         },
         addColNode: function () {
-            var $col = $(Templates.col());
+            var i;
+            var $col = $(Templates.col.r());
             for (i = 0; i < this.row; i++) {
-                $col.append(Templates.colcell());
+                $col.append(Templates.colcell.r());
             }
             this.$colRoot.append($col);
             this.$root.find('.row').each(function () {
-                $(this).append(Templates.cell());
+                $(this).append(Templates.cell.r());
             });
         }
     };
