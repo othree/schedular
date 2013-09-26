@@ -32,8 +32,8 @@
     root.Schedular = function ($el, options) {
         this.$el = $el;
         this.init(defaults(options, {
-            col: 2,
-            row: 6
+            col: 3,
+            row: 8
         }));
     };
 
