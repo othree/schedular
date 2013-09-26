@@ -4,8 +4,6 @@
 (function (root) {
     "use strict";
 
-    var i;
-
     var defaults = function (options, defaults) {
         var opt;
         options = options || {};
@@ -22,6 +20,7 @@
     };
 
     var Arr = function (len) {
+        var i;
         var array = [];
         for (i = 0; i < len; i++) {
             array.push(new Obj());
